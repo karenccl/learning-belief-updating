@@ -1,0 +1,9 @@
+variant,generating_model,selected_by_mean,best_by_median,true_model_mean,true_model_median
+locked,asymmetric_rl,hybrid_ph,fixed_rl,-932.3299707292432,-0.6323038005886066
+locked,bayes_cp,bayes_cp,bayes_cp,-0.6036731911578433,-0.6552265785572402
+locked,fixed_rl,hybrid_ph,fixed_rl,-12.51298079016242,-0.5058217652068393
+locked,hybrid_ph,fixed_rl,hybrid_ph,-0.5496321710954253,-0.5941365056104657
+bounded,asymmetric_rl,fixed_rl,fixed_rl,-0.5839225596602703,-0.6176826213664945
+bounded,bayes_cp,bayes_cp,bayes_cp,-0.602704664457083,-0.6577582617342073
+bounded,fixed_rl,fixed_rl,fixed_rl,-0.4905767242669689,-0.4977992049479165
+bounded,hybrid_ph,fixed_rl,bayes_cp,-0.5497994569724447,-0.5941365068442548

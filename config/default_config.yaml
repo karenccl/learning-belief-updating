@@ -1,0 +1,37 @@
+# config/default_config.yaml
+master_seed: 20261001
+task:
+  reward_high: 0.80
+  reward_low: 0.20
+  initial_advantageous_option: 0
+  cv_block_length: 40
+  conditions:
+    stable:   {type: single, reversal_after_fraction: 0.75}
+    moderate: {type: periodic, interval: 40}
+    volatile: {type: periodic, interval: 20}
+fitting:
+  n_starts_single: 20
+  n_starts_recovery: 10
+  start_sd: 1.5
+  grad_norm_tol: 1.0e-3
+recovery:
+  parameter:
+    trial_counts: [80, 160, 320]
+    agents_per_cell: 50      # raise to 100 for final figures
+  model:
+    trial_count: 160
+    agents_per_cell: 50
+    tie_threshold_per_trial: 0.01
+predictive_checks:
+  demo_agents: 100
+  replicates_per_agent: 100
+parameter_ranges:
+  alpha:     [0.05, 0.80]
+  alpha_pos: [0.05, 0.80]
+  alpha_neg: [0.05, 0.80]
+  beta:      [0.5, 8.0]    # log-uniform
+  eta:       [0.05, 0.80]
+  kappa:     [0.10, 0.90]
+  h:         [0.01, 0.30]
+compute:
+  n_jobs: -2               # joblib: all cores but one

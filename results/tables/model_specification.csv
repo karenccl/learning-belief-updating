@@ -1,0 +1,7 @@
+model,update_rule,free_parameters,simulation_ranges,choice_rule
+random,P(a=1) = 0.5,-,-,P(a=1) = logistic(beta (Q1 - Q0)); rho = 0 in primary models
+perseveration,P(a=1) = logistic(b + rho s_{t-1}); trial 1: 0.5,"b (unbounded), rho (-5, 5)",-,P(a=1) = logistic(beta (Q1 - Q0)); rho = 0 in primary models
+fixed_rl,Q_a <- Q_a + alpha delta,"alpha (0,1), beta > 0",alpha 0.05-0.80; beta 0.5-8 (log),P(a=1) = logistic(beta (Q1 - Q0)); rho = 0 in primary models
+asymmetric_rl,Q_a <- Q_a + alpha^{+/-} delta (sign of delta),"alpha+, alpha- (0,1), beta > 0",alpha+/- 0.05-0.80; beta 0.5-8 (log),P(a=1) = logistic(beta (Q1 - Q0)); rho = 0 in primary models
+hybrid_ph,alpha_t = kappa A_t; Q_a <- Q_a + alpha_t delta; A <- A + eta(|delta| - A),"eta, kappa (0,1), beta > 0",eta 0.05-0.80; kappa 0.10-0.90; beta 0.5-8 (log),P(a=1) = logistic(beta (Q1 - Q0)); rho = 0 in primary models
+bayes_cp,"b_t = (1-h) b'_{t-1} + h (1 - b'_{t-1}); Q from b_t with pH=.8, pL=.2; Bayes update","h (0,1), beta > 0",h 0.01-0.30; beta 0.5-8 (log),P(a=1) = logistic(beta (Q1 - Q0)); rho = 0 in primary models

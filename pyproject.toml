@@ -1,0 +1,10 @@
+[project]
+name = "learning-belief-updating"
+version = "0.1.0"
+description = "Identifiability and predictive comparison of learning models in a simulated reversal-learning task"
+requires-python = ">=3.11"
+dependencies = ["jax", "numpy", "scipy", "pandas", "matplotlib", "seaborn", "pyyaml", "joblib"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,20 @@
+name: rl-reversal
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - libblas=*=*openblas   # MKL 2026 build crashes scipy L-BFGS-B on Windows (0xc06d007f)
+  - scipy                 # from conda-forge; do not let pip replace it
+  - pandas
+  - matplotlib
+  - seaborn
+  - pytest
+  - pyyaml
+  - joblib
+  - nbformat              # notebooks/ only
+  - nbclient
+  - ipykernel
+  - pip
+  - pip:
+      - "jax[cpu]"
